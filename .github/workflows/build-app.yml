@@ -1,0 +1,26 @@
+name: Build app
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Test app
+        run: |
+          npm ci
+          npm run install:app
+          npm run build:app
+        env:
+          CI: true
