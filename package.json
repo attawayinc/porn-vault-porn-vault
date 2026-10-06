@@ -60,7 +60,7 @@
     "graphql-type-json": "^0.3.2",
     "graphql-type-long": "^0.1.1",
     "graphql-upload": "^11.0.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.10",
     "inquirer": "7.3.3",
     "js-sha512": "^0.8.0",
     "lru-cache": "^6.0.0",
